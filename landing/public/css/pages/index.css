@@ -1,0 +1,321 @@
+/* 
+Website CSS 
+By Abhi Nayar
+https://linkedin.com/in/abhinayar
+Any questions feel free to message me^.
+
+Fonts:
+  Rubik
+  Roboto
+
+Colors:
+
+*/
+
+/* Generic Template Styles */
+.bold {
+  font-weight: 700;
+} .light {
+  font-weight: 300;
+} .italic {
+  font-style: italic;
+} .prim {
+  font-family: 'Rubik', sans-serif;
+} .sec {
+  font-family: 'Roboto', sans-serif;
+} .main {
+  font-weight: bold;
+} .sub {
+  font-weight: normal;
+} .block {
+  display: block;
+} .inline-block {
+  display: inline-block;
+} .inline {
+  display: inline;
+}
+
+.bg-center {
+  background-position: center center;
+} .bg-left {
+  background-position: top left;
+} .bg-right {
+  background-position: bottom right;
+} .bg-fixed {
+  background-attachment: fixed;
+} .bg-scroll {
+  background-attachment: scroll;
+} .bg-cover {
+  background-size: cover;
+} .bg-contain {
+  background-size: contain;
+} bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.dark {
+  background-color: #121314;
+} .light {
+  background-color: rgb(225,79,61);
+}
+
+.shadow {
+  box-shadow: 0 5px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: transparent;
+  position: relative;
+  overflow-x: hidden;
+} body {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: 'Rubik', 'Roboto', Arial, sans-serif;
+  color: #fff;
+}
+/* Mobile First Media Queries */
+@media (min-width: 0px) {
+  .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  } .top-bar .logo-wrapper {
+    font-size: 2.9em;
+  } .top-bar .logo-wrapper .social-rollout {
+    font-size: 0.6em;
+    margin-top: 0;
+  }
+  
+  .header {
+    position: relative;
+    z-index: 2;
+    padding: 60px 0;
+    background-image: url(../../img/landing/landing_bg.jpg);
+    padding-top: 125px;
+  } .content-wrap {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    overflow: visible;
+  } .hero-info {
+    margin-left: 2%;
+  }
+  
+  h1.hero-text {
+    text-align: left;
+    padding-top: 15px;
+    color: #fff;
+    font-size: 2.3em;
+    font-weight: 400;
+    margin: 0;
+    max-width: 90%;
+  }  h1.hero-text br {
+    display: none;
+  } p.hero-text {
+    color: #ddd;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+    margin-top: 10px;
+    max-width: 95%;
+  } p.hero-text span {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .hero-form {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 100;
+    margin-left: -2%;
+  } .hero-form .form-item {
+    display: inline-block;
+    height: 60px;
+    border-radius: 60px;
+    border: 5px solid rgba(225,79,61, 0.4);
+    padding-left: 25px;
+    box-shadow: 0 5px 12px 0px rgba(0, 0, 0, 0.2);
+    font-size: 1.7rem;
+    width: 100%;
+  } .hero-form .form-input {
+    color: #000;
+    transition: all 120ms ease;
+  } .hero-form .form-button {
+    height: 54px;
+    padding: 14px 65px;
+    border: none;
+    background-color: rgb(225,79,61);
+    border-radius: 60px;
+    -webkit-appearance: none;
+    color: #fff;
+    margin-top: 10px;
+    transition: all 120ms ease;
+  } .hero-form .form-button:hover {
+    transform: scale(1.05);
+    transition: all 120ms ease;
+  } #mce-responses {
+    width: 85%;
+    margin-left: 1%;
+    background: rgb(225,79,61);
+    padding: 2.2rem;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    color: #fff;
+  } .bottom-form {
+    margin-left: 0;
+  }
+  
+  .small-section {
+    padding: 15px 0;
+  } .long-top {
+    padding-top: 25px;
+  } .long-bottom {
+    padding-bottom: 60px;
+  } .large-section {
+    padding: 30px 0;
+  } .row.shiftDown {
+    margin-top: 60px;
+  }
+  
+  h1.section-text {
+    font-size: 2.3em;
+    font-weight: 400;
+  } p.section-text, p.section-main {
+    color: #ddd;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 21px;
+  } h1.bottom-border {
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding: 0 24px;
+    padding-bottom: 12px;
+  } p.section-main {
+    font-size: 1.3em;
+    line-height: 24px;
+  }
+  
+  .artist-block {
+    width: 110%;
+    margin-left: -5%;
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+  } .artist-block .artist-image {
+    position: absolute;
+    z-index: 1;
+    top: -60%;
+    left: 0;
+    min-width: 100%;
+  } .artist-block .artist-image.shiftedDown {
+    top: -30%;
+  } .artist-block .artist-image.shiftedUp {
+    top: -120%;
+  } .artist-block .artist-name h1 {
+    padding: 0;
+    margin: 0;
+  } .artist-block .artist-name a {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding-top: 65px;
+    padding-left: 6%;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+  } .artist-block .artist-name a:hover {
+    background-color: rgba(141,47,34, 0.6); 
+    transition: all 200ms ease;
+  }
+  
+  .features-section {
+    background-image: url(../../img/landing/landing_bg.jpg);
+    padding-bottom: 60px;
+  } .features-section .section-text {
+    text-align: left;
+  }
+  
+  .social-rollout {
+    font-size: 2.2em;
+    margin-top: 10px;
+  } .social-rollout a {
+    padding: 0 20px;
+    color: rgb(225, 79, 61);
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .footer {
+    padding-bottom: 15px;
+    border-bottom: 30px solid #1c1c1f;
+  }
+  
+} @media (min-width: 320px) {
+  
+} @media (min-width: 540px) {
+   h1.hero-text br {
+    display: block;
+  } p.hero-text, p.section-text {
+    font-size: 1.2em;
+    line-height: 24px;
+  }
+  .img-responsive {
+    width: 100%;
+    
+  }
+} @media (min-width: 768px) {
+  p.hero-text {
+    font-size: 1.3em;
+  }
+} @media (min-width: 868px) {
+  
+} @media (min-width: 992px) {
+  .header {
+    padding: 30px 0;
+    min-height: 90vh;
+  } .hero-info {
+    margin-left: 0;
+  } h1.hero-text {
+    font-size: 3.2em;
+    padding-top: 20px;
+  } p.hero-text {
+    max-width: 95%;
+  } .hero-form {
+    margin-top: 30px;
+    margin-left: 0;
+  } .hero-form .form-item {
+    height: 54px;
+  } .hero-form .form-input {
+    width: 60%;
+    margin-right: 7px;
+  } .hero-form .form-button {
+    padding: 15px 52px;
+    margin-top: 0;
+  } .mce-responses {
+    margin-left: 0;
+  }
+  
+  .artist-block {
+    width: 20%;
+    margin-left: 0;
+  }
+  
+  .large-section {
+    padding: 60px 0;
+  }
+} @media (min-width: 1120px) {
+  
+} @media (min-width: 1440px) {
+  
+} @media (min-width: 1600px) {
+  
+}
