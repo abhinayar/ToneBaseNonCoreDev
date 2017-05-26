@@ -49,7 +49,7 @@ Colors:
   background-size: cover;
 } .bg-contain {
   background-size: contain;
-} bg-no-repeat {
+} .bg-no-repeat {
   background-repeat: no-repeat;
 }
 
