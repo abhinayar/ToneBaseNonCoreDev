@@ -15,7 +15,7 @@
     <!-- ************* -->
     <!-- ************* -->
     <!-- Icons -->
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="./favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./icons/apple-touch-icon-57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./icons/apple-touch-icon-114.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./icons/apple-touch-icon-72.png" />
@@ -86,7 +86,7 @@
     <meta name="twitter:title" content="">
     <meta name="twitter:description" content="">
     <meta name="twitter:creator" content=""><!-- handle -->
-    <meta name="twitter:image:src" content="./public/img/shared/meta_image.png"><!-- append site url -->
+    <meta name="twitter:image:src" content="./public/img/shared/metaImage.png"><!-- append site url -->
     <meta name="twitter:domain" content="">
     <meta name="twitter:app:name:iphone" content="">
     <meta name="twitter:app:name:ipad" content="">
@@ -102,16 +102,28 @@
     <meta property="og:title" content=""/>
     <meta property="og:description" content=""/>
     <meta property="og:type" content="product"/><!-- site type -->
-    <meta property="og:image" content="./public/img/shared/meta_image.png"/>
+    <meta property="og:image" content="./public/img/shared/metaImage.png"/>
     <!-- landing/End social info -->
     <!-- ************* -->
     <!-- ************* -->
     <!-- ************* -->
     <!-- Facebook Pixel Code -->
     <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '227459447755659', {
+    em: 'insert_email_variable'
+    });
+    fbq('track', 'PageView');
     </script>
-    <noscript>
-    </noscript>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=227459447755659&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
     <!-- ************* -->
     <!-- ************* -->
     <!-- ************* -->
@@ -119,6 +131,18 @@
     <script>
     </script>
   </head>
+  <script>
+    //Form validation 
+    function isValidEmail(val) {
+      var x = val;
+      var atpos = x.indexOf("@");
+      var dotpos = x.lastIndexOf(".");
+      if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        return false;
+      }
+      return true;
+    }
+  </script>
   <body>
     <div id="wrapper">
       <header id="page-header">
@@ -126,37 +150,21 @@
           <div class="container">
             <div class="content-wrap">
               <div class="row">
-                <div class="col-xs-12 col-md-6 logo-wrapper logo-social-mob">
+                <div class="col-xs-12 logo-wrapper logo-social-mob">
                   <div class="logo">
                     <span class="logotext prim main">tonebase</span>
                   </div>
                   <div class="social-rollout">
-                    <a href="" class="fb-link social-link">
+                    <a href="https://www.facebook.com/tonebaseteam/" class="fb-link social-link">
                       <i class="fa fa-facebook"></i>
                     </a>
-                    <a href="" class="ig-link social-link">
+                    <a href="https://www.instagram.com/tonebaseteam/" class="ig-link social-link">
                       <i class="fa fa-instagram"></i>
                     </a>
-                    <a href="" class="twitter-link social-link">
+                    <a href="https://twitter.com/tonebaseteam" class="twitter-link social-link">
                       <i class="fa fa-twitter"></i>
                     </a>
-                    <a href="" class="linkedin-link social-link">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="hidden-xs col-md-6 social">
-                  <div class="social-rollout">
-                    <a href="" class="fb-link social-link">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="" class="ig-link social-link">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                    <a href="" class="twitter-link social-link">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="" class="linkedin-link social-link">
+                    <a href="https://www.linkedin.com/company/tonebase" class="linkedin-link social-link">
                       <i class="fa fa-linkedin"></i>
                     </a>
                   </div>
@@ -172,44 +180,47 @@
           <div class="container">
             <div class="content-wrap">
               <div class="row">
-                <div class="col-xs-12 col-xs-offset-0 col-md-5 col-md-offset-0 col-md-push-7 hero-image">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0 col-lg-6 hero-image">
                   <!-- Hero Image -->  
                   <img class="img-responsive shadow" alt="tonebase hero" src="public/img/landing/hero.jpg">
                 </div>
-                <div class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-0 col-md-pull-5 hero-info">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0 col-lg-6 hero-info">
                   <!-- Hero Text Info. -->
                   <h1 class="hero-text prim">
-                    Online masterclasses <br>from the world's most famous guitarists
+                    Online masterclasses <br>from the world's greatest guitarists
                   </h1>
-                  <p class="hero-text sec">
-                    tonebase is building a platform to bring you knowledge from the world's greatest guitarists. Simple, easy, on-demand and on-line. 
-                    <span class="cta">
-                      We are currently in a closed beta. 
-                      <br>
-                      Enter your email to request access and for updates!
-                    </span>
-                  </p>
-                  <div class="hero-form text-left">
-                    <!-- Mailchimp Form Integration -->
-                    <div id="mc_embed_signup">
-                      <form action="//tone-base.us15.list-manage.com/subscribe/post?u=b8756b171bdafdd9be90501ad&amp;id=0604c2dafc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                          <input type="email" value="" name="EMAIL" class="required email form-input form-item email" id="mce-EMAIL" placeholder="Email Address">
-                          <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-cta form-item form-button">
-                          <div id="mce-responses" class="clear hidden">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
+                  <div class="hero-bottom">
+                    <p class="hero-text sec">
+                      <span class="hidden-sm">tonebase is building a platform to bring you knowledge from the world's greatest guitarists. Simple, easy, on-demand and on-line.</span>
+                      <span class="hidden-xs">tonebase gives you instant access to the knowledge of the world's greatest guitarists, performers and educators. Simple, easy, on-demand and on-line.</span>
+                      <span class="cta">
+                        <b>We are currently in a closed beta.</b>
+                        <br>
+                        Enter your email to request access and for updates!
+                      </span>
+                    </p>
+                    <div class="hero-form top-form text-left">
+                      <!-- Mailchimp Form Integration -->
+                      <div id="mc_embed_signup">
+                        <form action="//tone-base.us15.list-manage.com/subscribe/post?u=b8756b171bdafdd9be90501ad&amp;id=0604c2dafc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                          <div id="mc_embed_signup_scroll">
+                            <input type="email" value="" name="EMAIL" class="required email form-input form-item email" id="mce-EMAIL" placeholder="Email Address">
+                            <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-cta form-item form-button">
+                            <div id="mce-responses" class="clear hidden">
+                              <div class="response" id="mce-error-response" style="display:none"></div>
+                              <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                              <input type="text" name="b_b8756b171bdafdd9be90501ad_0604c2dafc" tabindex="-1" value="">
+                            </div>
                           </div>
-                          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                            <input type="text" name="b_b8756b171bdafdd9be90501ad_0604c2dafc" tabindex="-1" value="">
-                          </div>
-                        </div>
-                      </form>
+                        </form>
+                      </div>
+                      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                      <script type='text/javascript'>
+                        (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+                      </script>
                     </div>
-                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-                    <script type='text/javascript'>
-                      (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-                    </script>
                   </div>
                 </div>
               </div>
@@ -223,7 +234,7 @@
                 <div class="col-xs-10 col-xs-offset-1 text-center">
                   <div class="small-section heading">
                     <h1 class="section-text bottom-border">
-                      Featuring
+                      Featuring<span class="hidden-xs">&nbsp;Content From</span>
                     </h1>
                   </div>
                 </div>
@@ -236,7 +247,7 @@
             <div class="content-wrap">
               <div class="row">
                 <!-- Block -->
-                <div class="col-xs-12 col-md-4 artist-block" data-target="Eliot Fisk">
+                <div class="col-xs-12 col-sm-6 col-md-4 artist-block" data-target="Eliot Fisk">
                   <div class="artist-name">
                     <h1 class="section-text text-left">
                       <a href="www.eliotfisk.com">Eliot Fisk</a>
@@ -248,15 +259,15 @@
                     </p>
                   </div>
                   <div class="artist-overlay hidden-xs"></div>
-                  <div class="artist-image">
+                  <div class="artist-image shiftedDown">
                     <img class="img-responsive" alt="Eliot Fisk" src="./public/img/artists/eliotFisk.jpg">
                   </div>
                 </div>
-                <!-- landing/Block -->
+                <!-- ./Block -->
                 <!-- Block -->
-                <div class="col-xs-12 col-md-4 artist-block" data-target="Benjamin Verdery">
+                <div class="col-xs-12 col-sm-6 col-md-4 artist-block" data-target="Benjamin Verdery">
                   <div class="artist-name">
-                    <h1 class="section-text text-left">
+                    <h1 class="section-text text-left long-name">
                       <a href="http://www.benjaminverdery.com/">Benjamin Verdery</a>
                     </h1>
                   </div>
@@ -270,9 +281,9 @@
                     <img class="img-responsive" alt="Benjamin Verdery" src="./public/img/artists/benjaminVerdery.jpg">
                   </div>
                 </div>
-                <!-- landing/Block -->
+                <!-- ./Block -->
                 <!-- Block -->
-                <div class="col-xs-12 col-md-4 artist-block" data-target="Xuefei Yang">
+                <div class="col-xs-12 col-sm-6 col-md-4 artist-block" data-target="Xuefei Yang">
                   <div class="artist-name">
                     <h1 class="section-text text-left">
                       <a href="http://www.xuefeiyang.com/">Xuefei Yang</a>
@@ -284,13 +295,13 @@
                     </p>
                   </div>
                   <div class="artist-overlay hidden-xs"></div>
-                  <div class="artist-image shiftedUp">
+                  <div class="artist-image shiftedDown">
                     <img class="img-responsive" alt="Xuefei Yang" src="./public/img/artists/xuefeiYang.jpg">
                   </div>
                 </div>
-                <!-- landing/Block -->
+                <!-- ./Block -->
                 <!-- Block -->
-                <div class="col-xs-12 col-md-4 artist-block" data-target="Frederic Hand">
+                <div class="col-xs-12 col-sm-6 col-md-4 artist-block" data-target="Frederic Hand">
                   <div class="artist-name">
                     <h1 class="section-text text-left">
                       <a href="http://www.frederichand.com/">Frederic Hand</a>
@@ -306,9 +317,9 @@
                     <img class="img-responsive" alt="Frederic Hand" src="./public/img/artists/fredericHand.jpg">
                   </div>
                 </div>
-                <!-- landing/Block -->
+                <!-- ./Block -->
                 <!-- Block -->
-                <div class="col-xs-12 col-md-4 artist-block" data-target="Tariq Harb">
+                <div class="col-xs-12 col-sm-6 col-md-4 artist-block" data-target="Tariq Harb">
                   <div class="artist-name">
                     <h1 class="section-text text-left">
                       <a href="https://www.facebook.com/tariqharb/">Tariq Harb</a>
@@ -320,13 +331,13 @@
                     </p>
                   </div>
                   <div class="artist-overlay hidden-xs"></div>
-                  <div class="artist-image">
+                  <div class="artist-image shiftedDown">
                     <img class="img-responsive" alt="Tariq Harb" src="./public/img/artists/tariqHarb.jpg">
                   </div>
                 </div>
-                <!-- landing/Block -->
+                <!-- ./Block -->
                 <!-- Block -->
-                <div class="col-xs-12 col-md-4 artist-block" data-target="Sanel Redzic">
+                <div class="col-xs-12 col-sm-6 col-md-4 artist-block" data-target="Sanel Redzic">
                   <div class="artist-name">
                     <h1 class="section-text text-left">
                       <a href="http://www.sanelredzic.com/">Sanel Redzic</a>
@@ -342,12 +353,48 @@
                     <img class="img-responsive" alt="Sanel Redzic" src="./public/img/artists/sanelRedzic.jpg">
                   </div>
                 </div>
-                <!-- landing/Block -->
+                <!-- ./Block -->
+                <!-- Block -->
+                <div class="col-xs-12 col-sm-6 col-md-4 artist-block" data-target="William Kanengiser">
+                  <div class="artist-name">
+                    <h1 class="section-text text-left long-name">
+                      <a href="http://www.kanengiser.com/">William Kanengiser</a>
+                    </h1>
+                  </div>
+                  <div class="artist-info hidden-xs">
+                    <p class="section-text">
+                      Artist Bio.
+                    </p>
+                  </div>
+                  <div class="artist-overlay hidden-xs"></div>
+                  <div class="artist-image shiftedDown">
+                    <img class="img-responsive" alt="William Kanengiser" src="./public/img/artists/williamKanengiser.jpg">
+                  </div>
+                </div>
+                <!-- ./Block -->
+                <!-- Block -->
+                <div class="hidden-xs col-sm-6 col-md-4 artist-block filler" data-target="More">
+                  <div class="artist-name">
+                    <h1 class="section-text text-left">
+                      <span class="hidden-md"><a>And many others...</a></span><span class="hidden-xs hidden-sm"><a>And more...</a></span>
+                    </h1>
+                  </div>
+                  <div class="artist-info hidden-xs">
+                    <p class="section-text">
+                      Artist Bio.
+                    </p>
+                  </div>
+                  <div class="artist-overlay hidden-xs"></div>
+                  <div class="artist-image dark shiftedDown">
+                    <img class="img-responsive" alt="William Kanengiser" src="./public/img/artists/filler.jpg">
+                  </div>
+                </div>
+                <!-- ./Block -->
               </div>
             </div>
           </div>
         </div>
-        <div class="section dark">
+        <div class="section dark hidden-sm hidden-md hidden-lg">
           <div class="container">
             <div class="content-wrap">
               <div class="row">
@@ -380,12 +427,12 @@
         <div class="section features-section large-section bg-cover bg-left bg-scroll bg-no-repeat">
           <div class="container">
             <div class="content-wrap">
-              <div class="row">
-                <div class="col-xs-12 col-xs-offset-0 col-md-5 col-md-offset-0 col-md-push-7 hero-image">
+              <div class="row long-top">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0 col-md-push-7 hero-image">
                   <!-- Hero Image -->  
-                  <img class="img-responsive" alt="placeholder" src="./public/img/features/placeholder.jpg">
+                  <img class="img-responsive" alt="Interactive Learning Environment" src="./public/img/features/scoreSwitch.jpg">
                 </div>
-                <div class="col-xs-12 col-md-7 col-md-offset-0 col-md-pull-5">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0 col-md-pull-5 features-info">
                   <h1 class="section-text prim">
                     Modern, Interactive Learning Environment
                   </h1>
@@ -395,11 +442,11 @@
                 </div>
               </div>
               <div class="row shiftDown">
-                <div class="col-xs-12 col-md-5 hero-image">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0 hero-image">
                   <!-- Hero Image -->  
-                  <img class="img-responsive" alt="placeholder" src="./public/img/features/placeholder.jpg">
+                  <img class="img-responsive" alt="High Quality Educators" src="./public/img/features/artistGrid.jpg">
                 </div>
-                <div class="col-xs-12 col-md-7">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0 features-info">
                   <h1 class="section-text prim">
                     Only The Highest Quality Artists &amp; Educators
                   </h1>
@@ -409,11 +456,11 @@
                 </div>
               </div>
               <div class="row shiftDown">
-                <div class="col-xs-12 col-xs-offset-0 col-md-5 col-md-offset-0 col-md-push-7 hero-image">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0 col-md-push-7 hero-image short">
                   <!-- Hero Image -->  
-                  <img class="img-responsive" alt="placeholder" src="./public/img/features/placeholder.jpg">
+                  <img class="img-responsive" alt="Artists Benefit" src="./public/img/features/artistValue.png">
                 </div>
-                <div class="col-xs-12 col-md-7 col-md-offset-0 col-md-pull-5">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0 col-md-pull-5 features-info">
                   <h1 class="section-text prim">
                     Our Proceeds Directly Benefit Musicians
                   </h1>
@@ -429,14 +476,14 @@
           <div class="container">
             <div class="content-wrap">
               <div class="row">
-                <div class="col-xs-12 text-center">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
                   <div class="small-section heading long-bottom">
                     <h1 class="section-text bottom-border">
                       Interested?
                     </h1>
                     <p class="section-text text-left">
                       tonebase is currently in a private beta and will launch in June. Visit our booth at <a href="http://www.guitarfoundation.org/">GFA 2017</a>.<br><br>
-                      Enter your email address to request early access as well as to receive alerts as we launch!
+                      Enter your email address to request early access and to receive alerts as we launch!
                     </p>
                     <div class="hero-form bottom-form text-center">
                       <!-- Mailchimp Form Integration -->
@@ -466,17 +513,17 @@
             </div>
           </div>
         </div>
-        <div class="section light features-intro">
+        <div class="section light about-section">
           <div class="container">
             <div class="content-wrap">
               <div class="row">
-                <div class="col-xs-12 col-xs-offset-0 text-center">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 text-center">
                   <div class="small-section heading long-bottom">
                     <h1 class="section-text bottom-border">
                       About Us
                     </h1>
                     <p class="section-text text-left sec">
-                      tonebase, inc. aims to democratize music education by giving you access to the world's greatest artists and educators. By providing a platform for the world to engage with the knowledge these legends have collected over their illustrious careers, we hope to inspire the next generation of musicians and bring music education into the 21st century.
+                      tonebase, inc. aims to democratize music education by opening access to the world's greatest artists and educators. By providing a platform for the world to engage with the knowledge these legends have collected over their illustrious careers, we hope to inspire the next generation of musicians and bring music education into the 21st century.
                       <br><br>                      
                       tonebase, inc. was founded at Yale University. It is currently funded by the <a href="http://yei.yale.edu/tone-base">Yale Entrepreunership Institute</a>. To learn more about the team or if you have any questions please <a href="mailto:team@tone-base.com?subject=General Inquiry">contact us</a>.
                       <br><br>
@@ -488,9 +535,11 @@
                       <br>
                       We'd love to hear from you <a href="mailto:team@tone-base.com?subject=Ad/Sponsorship Inquiry">here</a>.
                       <br><br>
-                      <b>Are you an artist or do you have artist suggestions for our platform?</b>
+                      <b>Are you an Artist? Educator? Musician?</b>
                       <br>
                       Write to us <a href="mailto:team@tone-base.com?subject=Artist Inquiry">here</a>.
+                      <br>
+                      We would love to discuss adding you to our exclusive list of content creators.
                     </p>
                   </div>
                 </div>
@@ -510,16 +559,16 @@
                       Thank you!
                     </h1>
                     <div class="social-rollout">
-                      <a href="" class="fb-link social-link">
+                      <a href="https://www.facebook.com/tonebaseteam/" class="fb-link social-link">
                         <i class="fa fa-facebook"></i>
                       </a>
-                      <a href="" class="ig-link social-link">
+                      <a href="https://www.instagram.com/tonebaseteam/" class="ig-link social-link">
                         <i class="fa fa-instagram"></i>
                       </a>
-                      <a href="" class="twitter-link social-link">
+                      <a href="https://twitter.com/tonebaseteam" class="twitter-link social-link">
                         <i class="fa fa-twitter"></i>
                       </a>
-                      <a href="" class="linkedin-link social-link">
+                      <a href="https://www.linkedin.com/company/tonebase" class="linkedin-link social-link">
                         <i class="fa fa-linkedin"></i>
                       </a>
                     </div>
@@ -551,6 +600,24 @@
     <!-- ************* -->
     <!-- ************* -->
     <!-- ************* -->
+    <!-- Facebook Event Driver -->
+    <script type="text/javascript">
+      $('#mc_embed_signup .form-button').click(function() {
+        var emailAddress;
+        if (isValidEmail($(this).closest(".form-input").val())) {
+          $(this).closest("form").hasClass(".top-form") ? emailAddress = $(".hero-form.top-form").val() : emailAddress = $(".hero-form.bottom-form").val();
+
+          fbq('track', 'emailAdded', {
+            email: emailAddress,
+            value: 0.4485, //$14.95 if user pays, assume 3% of users will pay, 0.03*14.95 = 0.4485
+            currency: 'USD'
+          });
+        } else {
+          alert("invalid");
+        }
+      });
+    </script>
+    <!-- ./End Facebook Event Driver -->
     <!-- SUGGESTIONS -->
     <!-- Google Adwords Code -->
     <!-- Google Ad Services Conversion.js -->
