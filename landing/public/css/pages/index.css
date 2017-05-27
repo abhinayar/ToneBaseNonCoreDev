@@ -364,6 +364,8 @@ html, body {
     padding-top: 135px;
   } .hero-info {
     margin-left: 0;
+  } .header .hero-image {
+    padding-top: 7px;
   } h1.hero-text {
     font-size: 3.2em;
     padding-top: 0;
@@ -428,13 +430,17 @@ html, body {
   } .artist-block .artist-image img {
     min-width: 140%;
     margin-left: -20%;
+  } .artist-block .artist-name a {
+    padding-top: 165px;
   } .artist-block[data-target="Benjamin Verdery"] .artist-name a {
-    padding-top: 125px;
+    padding-top: 165px;
+  } .artist-block[data-target="William Kanengiser"] .artist-name a {
+    padding-top: 132px;
   }
 }
 @media (min-width: 1182px) {
   .artist-block[data-target="William Kanengiser"] .artist-name a {
-    padding-top: 125px;
+    padding-top: 165px;
   }
 }
 @media (min-width: 1200px) {
@@ -457,7 +463,8 @@ html, body {
   } .features-section .hero-image.short {
     padding-top: 32px;
   } 
-} @media (min-width: 1440px) {
+} 
+@media (min-width: 1440px) {
   .container {
     max-width: 1200px;
   }
